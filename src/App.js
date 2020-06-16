@@ -1,5 +1,6 @@
 import React from 'react';
 import ParticipantsList from './Participants-list';
+import ChatList from './Chat-list'
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
      <div className="App">
        <ParticipantsList />
+       <ChatList />
      </div>
 
   );

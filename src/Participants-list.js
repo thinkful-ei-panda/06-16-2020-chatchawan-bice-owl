@@ -1,6 +1,6 @@
 import React from 'react';
 import ParticipantsCard from './Participants-card';
-import Participants from './Store';
+import store from './Store';
 import './participants-list.css';
 
 function ParticipantsList() {
@@ -9,7 +9,7 @@ function ParticipantsList() {
 
   let tmpParticipants2 = [];
 
-  Participants.forEach ( item => {
+  store.Participants.forEach ( item => {
 
     if ( item.inSession === true ) tmpParticipants1.push( item );
 
