@@ -1,5 +1,7 @@
-.header {
-	display: block;
+.side-bar-tabs {
+	display: flex;
+	position: relative;
+	align-items: stretch;
 	left: 0;
 	top: 0;
 	height: 39px;
@@ -10,14 +12,46 @@
 }
 
 .sidebar {
+	display: inline-block;
 	position: absolute;
-	display: block;
-	left: 0;
-	top: 40px;
-	height: 100%;
+	left: -330px;
+	top: 0px;
+	height: calc(100vh - 75px);
 	width: 330px;
 	border-right: 1px solid #8e939a;
+	background-color: #F9FAF8;
+	z-index: 97;
 	overflow-y: scroll;
+	transform: translateX(330px);
+}
+
+.stage {
+	display: inline-block;
+	position: relative;
+	left: 0;
+	top: 40px;
+	height: auto;
+	width: calc(100% - 330px);
+	padding-left: 331px;
+}
+.control-bar-container {
+	height: 75px;
+    width: 100%;
+    transition: transform .19s ease;
+    transform: translateY(0);
+    position: fixed;
+    bottom: 0;
+    z-index: 97;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.control-bar {
+	display: flex;
+	position: absolute;
+	height: 75px;
+	width: 100%;
+	background-color: #F9FAF8;
 }
 
 .header-sidebar-btn {
@@ -28,14 +62,4 @@
     float: left;
     padding: 10px 20px 0 20px;
     cursor: pointer;
-}
-
-.stage {
-	display: block;
-	position: absolute;
-	left: 331px;
-	top: 40px;
-	background-color: #1E2835;
-	height: 100%;
-	/* padding-left: 331px; */
 }

@@ -32,16 +32,19 @@ function App() {
 	return (
 
 		 <div className="App">
-			 <header className="header">
-				 <div id="header-sidebar-btn-1" className="header-sidebar-btn">Chat</div>
-				 <div id="header-sidebar-btn-2" className="header-sidebar-btn">Participants</div>
-			 </header>
 			 <section className="sidebar">
+			 	<div className="side-bar-tabs">
+					<div id="header-sidebar-btn-1" className="header-sidebar-btn">Chat</div>
+				 	<div id="header-sidebar-btn-2" className="header-sidebar-btn">Participants</div>
+			 	</div>
 				<ParticipantsList />
 				<ChatList />
 			 </section>
 			 <section className="stage">
 			 	<StageList />
+			 </section>
+			 <section className="control-bar-container">
+			 	<div className="control-bar"></div>
 			 </section>
 		 </div>
 
