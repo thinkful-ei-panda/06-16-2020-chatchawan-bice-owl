@@ -44,7 +44,7 @@ function ChatCard(props) {
         
 
         if (props.type === 'thumbs-up') {
-            name += 'gave a ' + props.type
+            name += 'gave a ' + props.type + ' 👍'
         }
         if (props.type === 'thumbs-down') {
             name += 'gave a ' + props.type

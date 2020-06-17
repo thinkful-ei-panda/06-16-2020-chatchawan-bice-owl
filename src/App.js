@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import ParticipantsList from './Participants-list';
 import ChatList from './Chat-list'
+import StageList from './Stage-list'
 import './App.css';
 
 const init = () => {
@@ -37,10 +38,10 @@ function App() {
 			 </header>
 			 <section className="sidebar">
 				<ParticipantsList />
-				 <ChatList />
+				<ChatList />
 			 </section>
 			 <section className="stage">
-
+			 	<StageList />
 			 </section>
 		 </div>
 

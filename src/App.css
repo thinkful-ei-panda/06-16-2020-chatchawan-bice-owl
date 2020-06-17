@@ -1,14 +1,17 @@
 .header {
-	position: absolute;
+	display: block;
 	left: 0;
 	top: 0;
 	height: 39px;
 	width: 100%;
 	border-bottom: 1px solid #8e939a;
+	z-index: 99;
+	background-color: #F9FAF8;
 }
 
 .sidebar {
 	position: absolute;
+	display: block;
 	left: 0;
 	top: 40px;
 	height: 100%;
@@ -25,4 +28,14 @@
     float: left;
     padding: 10px 20px 0 20px;
     cursor: pointer;
+}
+
+.stage {
+	display: block;
+	position: absolute;
+	left: 331px;
+	top: 40px;
+	background-color: #1E2835;
+	height: 100%;
+	/* padding-left: 331px; */
 }
