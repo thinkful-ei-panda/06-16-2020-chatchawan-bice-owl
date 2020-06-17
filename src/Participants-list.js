@@ -4,38 +4,34 @@ import store from './Store';
 import './participants-list.css';
 
 function ParticipantsList() {
-  
-  let tmpParticipants1 = [];
+	
+	let tmpParticipants1 = [];
 
-  let tmpParticipants2 = [];
+	let tmpParticipants2 = [];
 
-  store.Participants.forEach ( item => {
+	store.Participants.forEach ( item => {
 
-    if ( item.inSession === true ) tmpParticipants1.push( item );
+		if ( item.inSession === true ) tmpParticipants1.push( item );
 
-    else tmpParticipants2.push( item );
+		else tmpParticipants2.push( item );
 
-  });
+	});
 
-  let tmpParticipants3 = tmpParticipants1.concat( tmpParticipants2 );
+	let tmpParticipants3 = tmpParticipants1.concat( tmpParticipants2 );
 
-  return (
-    
-    <section className="participant-list">
-      
-      <div className="participant-list-cards">
-        
-        {tmpParticipants3.map( listItem => (
+	return (
+		
+			<div className="participants-list">
+				
+				{tmpParticipants3.map( listItem => (
 
-            <ParticipantsCard key={listItem.id} name={listItem.name} avatar={listItem.avatar} inSession={listItem.inSession} onStage={listItem.onStage} />
-        
-        ))}
+						<ParticipantsCard key={listItem.id} name={listItem.name} avatar={listItem.avatar} inSession={listItem.inSession} onStage={listItem.onStage} />
+				
+				))}
 
-      </div>
+			</div>
 
-    </section>
-
-  );
+	);
 
 }
 
